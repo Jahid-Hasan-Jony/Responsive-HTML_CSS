@@ -37,8 +37,8 @@ main .top-section{
     align-items: center;
 }
 
-/*--- Top Section div style ---*/
-main .top-section .left-side, .top-section .right-side{width: 50%;}
+/*--- div style ---*/
+.left-side, .right-side{width: 50%;}
 
 /*--- Top Section button icon styles ---*/
 main .top-section .left-side .fas{margin: 0 12px;}
@@ -69,8 +69,8 @@ main .top-section p{
     margin: 10px 0;
 }
 
-/*--- Top Section button styles ---*/
-main .top-section button{
+/*--- button styles ---*/
+button{
     display: inline-block;
     border: none;
     color: white;
@@ -159,6 +159,26 @@ main .card-section .see-more{
     text-align: end;
     padding-right: 40px;
     cursor: pointer;
+}
+
+/*--- contact-form styles ---*/
+.contact-section{text-align: center;}
+.contact-form{display: flex;}
+.contact-form .left-side img{
+    width: 80%;
+    transform: rotateY(180deg);}
+.contact-form .right-side{padding: 10px;
+                          margin: 10px 0;
+                          text-align: center;}
+.contact-form .right-side input,textarea{display:block;
+                                width: 80%;
+                                padding: 10px;
+                                margin: 10px;}
+/*--- contact-form button ---*/
+.message-btn{
+    margin-left: 7px;
+    display: block;
+    border-radius: 5px;
 }
 /*--- main part end ---*/
 
@@ -249,6 +269,12 @@ Media Query
     main .card-section article .card h4{
         font-weight: bold;
     }
+    .contact-form{display: block;
+                  text-align: center;}
+    .contact-form .right-side{text-align: center;}
+    .contact-form .left-side,.contact-form .right-side{
+        margin: 10px auto;
+    }
 
     footer{
         height: 180px;
@@ -263,7 +289,7 @@ Media Query
 }
 
 /*------------ Tablet Device --------------*/
-@media only screen and (min-width: 688px) and (max-width:992px) {
+@media only screen and (min-width: 689px) and (max-width:992px) {
     .container{
         width: 82%;
         margin: 0 auto;
@@ -292,6 +318,13 @@ Media Query
         grid-template-columns: repeat(2,1fr);
         grid-gap: 15px;
         padding: 30px;
+    }
+    .contact-form .left-side img{
+        width: 90%;
+    }
+    .contact-form .left-side{
+        display: flex;
+        align-items: center;
     }
 }
 
