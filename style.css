@@ -1,34 +1,75 @@
-*{margin: 0;
-  padding: 0;}
+/*-- Poppins font import --*/
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Poppins&family=Yeseva+One&display=swap');
 
+
+*{margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+/*--- container class style ---*/
 .container{
-    width: 1200px;
+    width: 90%;
     margin: 0 auto;
 }
+
+/*--- header styles start ---*/
 header .title-bar{
     display: flex;
     height: 80px;
     justify-content: flex-start;
     align-items: center;
 }
+
+header .title-bar h1{
+    font-size: 24px;
+    font-weight: bold;
+    color: #3A3A3A;
+}
+/*--- header styles end ---*/
+
+/*--- Every section styles ---*/
 section{padding-bottom: 30px;}
 
+/*--- Top Section styles start ---*/
 main .top-section{
     display: flex;
     align-items: center;
 }
+
+/*--- Top Section div style ---*/
 main .top-section .left-side, .top-section .right-side{width: 50%;}
-main .top-section h1{
-    margin: 10px 0;
-    font-size: 52px;
+
+/*--- Top Section button icon styles ---*/
+main .top-section .left-side .fas{margin: 0 12px;}
+
+/*--- Top Section main focus image styles ---*/
+main .top-section .right-side img{width: 90%;}
+
+/*--- Top Section Hover effect main focus images ---*/
+main .top-section .left-side:hover+.right-side{
+    transform: rotate(360deg) translate3d(5ch, 0.4in, 5em);
+    transition: all ease 5s;
 }
 
+/*--- Top Section Heading styles ---*/
+main .top-section h1{
+    color: #3A3A3A;
+    font-weight: bold;
+    margin: 10px 0;
+    font-size: 42px;
+}
+
+/*--- Top Section Paragraph Style ---*/
 main .top-section p{
-    padding-right: 136px;
+    color: #3A3A3A;
+    font-weight: 600;
+    padding-right: 10px;
     font-size: 16px;
     margin: 10px 0;
 }
 
+/*--- Top Section button styles ---*/
 main .top-section button{
     display: inline-block;
     border: none;
@@ -38,40 +79,90 @@ main .top-section button{
     margin: 20px 0;
     border-radius: 25px;
     font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
 }
+/*--- Top Section styles End ---*/
 
-main .card-section{
-    
-}
+/*--- Card Section styles Start ---*/
+
+/*--- Card Section heading h1 styles ---*/
 main .card-section h1{
+    color: #3A3A3A;
+    font-size: 28px;
+    font-weight: 600;
     text-align: center;
     margin: 20px 0;}
 
+/*--- Card Section article styles ---*/
 main .card-section article{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-gap: 20px;
     padding: 40px;
 }
+
+/*--- Card Section cards styles ---*/
 main .card-section article .card{
+    border-radius: 5px;
     background-color: white;
     padding: 15px;
     box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 }
-main .card-section article .card *{padding: 7px 5px;}
+
+/*--- Card Section cards image styles ---*/
 main .card-section article .card img{
     width: 97%;
+    padding: 2px 5px;
 }
+
+/*--- Card Section cards heading h3 styles ---*/
 main .card-section article .card h3{
-    font-family: pop;
     font-size: 28px;
+    padding: 2px 5px;
 }
+
+/*--- Card Section cards heading h4 styles ---*/
 main .card-section article .card h4{
     font-size: 24px;
+    font-weight: 400;
+    padding: 2px 5px;
 }
+
+/*--- Card Section cards paragraph styles ---*/
 main .card-section article .card p{
+    padding: 2px 5px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #787885;
+}
+
+/*--- Card Section cards rating styles ---*/
+main .card-section article .card .rating-area{
+    display: flex;
+    align-items: baseline;
+}
+
+.fa-star,.fa-star-half-alt{
+    padding: 2px 0;
+    color: #FB8200;
     font-size: 14px;
 }
+
+/*--- Card Section see more anchor styles ---*/
+main .card-section .see-more{
+    display: block;
+    text-decoration: none;
+    color: #E02C6D;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: end;
+    padding-right: 40px;
+    cursor: pointer;
+}
+/*--- main part end ---*/
+
+/*--- footer part start ---*/
 footer{background-color: #0A0826;
        color: white;
        height: 200px;
@@ -80,3 +171,130 @@ footer{background-color: #0A0826;
        justify-content: center;
        align-items: center;
        }
+footer h3{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+footer p{
+    margin-top: 5px;
+    font-size: 14px;
+    color: #D9DBE1;
+}
+
+footer ul{list-style-type: none;
+          display: flex;
+          margin-top: 10px;
+        }
+footer ul li:not(:last-child){
+    margin-right: 20px;
+}
+footer ul li a{
+   color: white;
+}
+/*--- footer part end ---*/
+
+
+/*-------------------------
+Media Query
+---------------------------*/
+
+/*------ Mobile Device ------*/
+@media only screen and (max-width: 688px) {
+    .container{
+        width: 98%;
+    }
+    header .title-bar{
+        justify-content: center;
+    }
+    header .title-bar h1 {
+        font-size: 16px;
+    }
+    main .top-section{
+        display: block;
+        text-align: center;
+    }
+    main .top-section .left-side, .top-section .right-side{width: 100%;}
+    
+    main .top-section h1{
+        margin: 5px 0;
+        font-size: 28px;
+    }
+    
+    main .top-section p{
+        padding-right: 0;
+        font-size: 14px;
+        margin: 5px 0;
+        padding: 0 104px;
+    }
+
+    main .card-section h1{
+        font-size: 16px;
+        font-weight: 600;
+        text-align: center;
+        margin: 10px 0;}
+
+    main .top-section .right-side{
+        margin: 0 auto;
+    }
+
+    main .top-section .right-side img{width: 85%;
+                                      height: 85%;}
+    
+    main .card-section article{
+        grid-template-columns: repeat(1,1fr);
+        grid-gap: 10px;
+        padding: 20px;
+    }
+    main .card-section article .card h4{
+        font-weight: bold;
+    }
+
+    footer{
+        height: 180px;
+        }
+    footer h3{
+        font-size: 16px;
+    }
+    
+    footer p{
+        font-size: 12px;
+    }
+}
+
+/*------------ Tablet Device --------------*/
+@media only screen and (min-width: 688px) and (max-width:992px) {
+    .container{
+        width: 82%;
+        margin: 0 auto;
+    }
+    header .title-bar h1{
+        font-size: 20px;
+    }
+
+    main .top-section h1{
+        margin: 5px 0;
+        font-size: 32px;
+    }
+    
+    main .top-section p{
+        padding-right: 10px;
+    }
+    main .top-section .left-side{width: 60%;}
+    main .top-section .right-side{width: 40%;}
+    main .top-section .right-side img{width: 100%;}
+
+    main .card-section h1{
+        font-size: 22px;
+        margin: 15px 0;}
+    
+    main .card-section article{
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 15px;
+        padding: 30px;
+    }
+}
+
+
+
+
