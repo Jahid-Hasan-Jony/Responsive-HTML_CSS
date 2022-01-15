@@ -1,0 +1,82 @@
+*{margin: 0;
+  padding: 0;}
+
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+header .title-bar{
+    display: flex;
+    height: 80px;
+    justify-content: flex-start;
+    align-items: center;
+}
+section{padding-bottom: 30px;}
+
+main .top-section{
+    display: flex;
+    align-items: center;
+}
+main .top-section .left-side, .top-section .right-side{width: 50%;}
+main .top-section h1{
+    margin: 10px 0;
+    font-size: 52px;
+}
+
+main .top-section p{
+    padding-right: 136px;
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+main .top-section button{
+    display: inline-block;
+    border: none;
+    color: white;
+    background-color: #E02C6D;
+    padding: 12px 15px;
+    margin: 20px 0;
+    border-radius: 25px;
+    font-size: 16px;
+}
+
+main .card-section{
+    
+}
+main .card-section h1{
+    text-align: center;
+    margin: 20px 0;}
+
+main .card-section article{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 20px;
+    padding: 40px;
+}
+main .card-section article .card{
+    background-color: white;
+    padding: 15px;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+main .card-section article .card *{padding: 7px 5px;}
+main .card-section article .card img{
+    width: 97%;
+}
+main .card-section article .card h3{
+    font-family: pop;
+    font-size: 28px;
+}
+main .card-section article .card h4{
+    font-size: 24px;
+}
+main .card-section article .card p{
+    font-size: 14px;
+}
+footer{background-color: #0A0826;
+       color: white;
+       height: 200px;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       }
